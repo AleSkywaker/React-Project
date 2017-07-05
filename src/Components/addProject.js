@@ -12,26 +12,37 @@ class AddProject extends Component {
     categories: ['Web Design', 'Web development', 'Mobile Devolopment']
   }
   handleSubmit(e){
-    console.log(this.refs.title.value);
+    if(this.refs.title.value === ''){
+      alert('Titulo debe estar completado');
+    }else{
+      this.setState({newProject:{
+        title:this.refs.title.value,
+        category:this.refs.category.value
+      }}, function(){
+      //console.log(this.state)
+      this.props.AddProject(this.state.newProject)
+      });
+    }
     e.preventDefault();
       }
   render() {
     let categoryOptions = this.props.categories.map(category => {
-      return <option key={category} value="category">{category}</option>
+      return <option key={category} value={category}>{category}</option>
     })
     return (
       <div>
         <h3>Añadir Projecto</h3>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <div>
-          <label>Titulo</label><br/>
+          <label>Comentario</label><br/>
           <input type="text" ref="title" />
           </div>
           <div>
           <label>Categoria</label><br/>
           <select ref="category">{categoryOptions}</select>
-          </div>
+          </div><br/>
           <input type="submit" value="Submit"/>
+          <br/>
         </form>
       </div>
           )

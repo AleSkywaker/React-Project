@@ -17,8 +17,8 @@ class Projects extends Component {
     console.log(this.props);
     return (
       <div className="Projects">
+        <h3>Ultimos Proyectos</h3>
        {projectItems}
-
       </div>
     );
   }
