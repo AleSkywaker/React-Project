@@ -1,6 +1,9 @@
 NO SE HA TOCADO EL README PORQUE CONTIENE INFORMACION MUY IMPORTANTE, BASICAMENTE Y ENTRE OTRAS, YA NO SE NECEISTA CONFIGURAR WEBPACK
 SI SE UTILIZA create-react-app
 
+DE TODAS FORMAS...SI NO QUIERES LEER LA DOCU, CLONA EL REPO, HAZ NPM INSTALL Y LUEGO NPM START,
+DEBERIAS PODER VER EL MINI PROYECTO EN LOCALHOST:3000 (SE ABRE SOLO)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
